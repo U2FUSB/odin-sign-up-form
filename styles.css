@@ -1,4 +1,29 @@
 @font-face {
     font-family: orange-juice;
-    src: url('./orange juice 2.0.ttf');
+    src: url("./font/orange juice 2.0.ttf");
+}
+:root {
+    --left-width: 65vw;
+    --right-width: calc(100vw - var(--left-width));
+}
+* {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+body {
+    display: flex;
+    height: 100vh;
+    width: auto;
+    justify-content: space-between;
+    overflow: hidden;
+}
+section.right {
+    flex-grow: 1;
+    width: var(--right-width);
+    background-image: url(./img/tim-mossholder-dlYOWMX-JSE-unsplash.jpg);
+}
+section.left {
+    flex-grow: 1;
+    width: var(--left-width);
 }
