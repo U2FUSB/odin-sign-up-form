@@ -10,16 +10,13 @@
     margin: 0;
     padding: 0;
     overflow: hidden;
+    text-decoration: none;
 }
 body {
     display: flex;
     height: 100vh;
     width: auto;
     justify-content: space-between;
-}
-section.left {
-    flex-grow: 1;
-    width: var(--left-width);
 }
 section.right {
     flex-grow: 1;
@@ -36,7 +33,7 @@ section.right {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 5vh;
+    gap: 3vh;
     padding: 2vh 0;
     flex-wrap: wrap;
     margin-top: 10vh;
@@ -49,10 +46,11 @@ section.right {
         "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
         "Helvetica Neue", sans-serif;
     font-size: 10vw;
+    margin-top: 4vh;
 }
 .logoarea > img {
     width: 20vw;
-    padding: 0 0;
+    padding: 0;
 }
 section.right > p {
     font-weight: bold;
@@ -61,6 +59,46 @@ section.right > p {
     text-shadow: 0 0 2px black;
     margin: auto 10vw 10vh 10vw;
     transform: rotate(270deg);
+}
+
+section.left {
+    flex-grow: 1;
+    width: var(--left-width);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2vh;
+    font-size: 3vw;
+}
+section.left > * {
+    margin: 0 3vw;
+}
+section.left > button {
+    width: auto;
+    height: 5vw;
+    background-color: rgb(87, 188, 228);
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 10rem;
+    box-shadow: -1px -1px 3px rgb(65, 139, 168);
+    font-size: 2vw;
+}
+section.left > button:active {
+    translate: 1px 1px;
+}
+
+section.left > form {
+    box-shadow: -1px 0.2px 5px black;
+    padding: 1vh 5vw;
+    margin: 1rem 0;
+}
+section.left p:first-of-type,
+section.left p:first-of-type + p {
+    font-weight: bold;
+}
+section.left p:last-child {
+    font-size: 2vw;
 }
 
 @media only screen and (min-width: 600px) {
@@ -87,5 +125,20 @@ section.right > p {
         padding: 0;
         margin-bottom: 1vh;
         transform: rotate(0deg);
+    }
+    section.left {
+        font-size: 1rem;
+    }
+    section.left p:first-of-type,
+    section.left p:first-of-type + p {
+        font-size: 1.25rem;
+    }
+    section.left p:last-child {
+        font-size: 1rem;
+    }
+    section.left > button {
+        font-size: 0.75rem;
+        width: 8rem;
+        height: 2rem;
     }
 }
