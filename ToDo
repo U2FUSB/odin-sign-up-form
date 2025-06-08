@@ -8,8 +8,8 @@
 
 > Don't care what odin says. MOBILE FIRST!!! So use media querys.
 
-- use flex for basic layout
-- style "not-forms"
+- ~~use flex for basic layout~~
+- ~~style "not-forms"~~
 - basic style for forms
 - add input validation styling
 
