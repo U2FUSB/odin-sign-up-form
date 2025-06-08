@@ -125,6 +125,16 @@ section.left form input:invalid:not(:placeholder-shown) {
 section.left form input:valid:not(:placeholder-shown) {
     background-color: rgb(0, 128, 0.8);
 }
+section.left form input:invalid:focus:not(:placeholder-shown) + ::after {
+    content: "2 lower case letters, 2 upper case letters, 2 digits, min 12 characters";
+    position: absolute;
+    translate: 5rem -0.5rem;
+    border: black solid 1px;
+    background-color: rgb(255, 255, 0,0.5);
+    padding: 2px;
+    max-width: 20rem;
+    font-size: 0.75rem;
+}
 
 @media only screen and (min-width: 500px) {
     section.right {
