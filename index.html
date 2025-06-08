@@ -14,22 +14,36 @@
                 Eligendi voluptas unde consectetur assumenda repudiandae ex
             </p>
             <p>cupiditate quia atque velit enim?</p>
-            <form action="">
+            <form action="." method="get">
                 <legend>Let's do this!</legend>
-                <label for="first">First Name</label>
-                <input type="text" id="first" name="first" />
-                <label for="last">Last Name</label>
-                <input type="text" id="last" name="last" />
-                <label for="mail">Email</label>
-                <input type="text" id="mail" name="mail" />
-                <label for="phone">Phone Number</label>
-                <input type="text" id="phone" name="phone" />
-                <label for="pass1">Password</label>
-                <input type="text" id="pass1" name="pass1" />
-                <label for="pass2">Confirm Password</label>
-                <input type="text" id="pass2" name="pass2" />
+                <div>
+                    <div>
+                        <label for="first">First Name</label>
+                        <input type="text" id="first" name="first" placeholder="Bob" required/>
+                    </div>
+                    <div>
+                        <label for="last">Last Name</label>
+                        <input type="text" id="last" name="last" placeholder="Bobster" required/>
+                    </div>
+                    <div>
+                        <label for="mail">Email</label>
+                        <input type="email" id="mail" name="mail" placeholder="theBob@bobmail.bob" required/>
+                    </div>
+                    <div>
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="+43 669 26 32 345" required/>
+                    </div>
+                    <div>
+                        <label for="pass1">Password</label>
+                        <input type="password" id="pass1" name="pass1" placeholder="superSecret" required/>
+                    </div>
+                    <div>
+                        <label for="pass2">Confirm Password</label>
+                        <input type="password" id="pass2" name="pass2" placeholder="superSecret" required/>
+                    </div>
+                </div>
             </form>
-            <button>Create Account</button>
+            <button type="submit">Create Account</button>
             <p>Already have an account? <a href=".">Log In</a></p>
         </section>
         <section class="right">

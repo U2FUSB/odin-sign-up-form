@@ -27,6 +27,7 @@ section.right {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    height: 100%;
 }
 .logoarea {
     background-color: rgba(0, 0, 0, 0.4);
@@ -92,6 +93,7 @@ section.left > form {
     box-shadow: -1px 0.2px 5px black;
     padding: 1vh 5vw;
     margin: 1rem 0;
+    background-color: whitesmoke;
 }
 section.left p:first-of-type,
 section.left p:first-of-type + p {
@@ -100,14 +102,36 @@ section.left p:first-of-type + p {
 section.left p:last-child {
     font-size: 2vw;
 }
+section.left form legend {
+    font-size: 4vw;
+}
+section.left form label {
+    font-size: 3vw;
+    text-wrap: nowrap;
+}
+section.left form input {
+    display: block;
+    width: 50vw;
+    height: 3.5vw;
+    margin-bottom: 2.5vh;
+    border-radius: 0.2rem;
+    border: black solid 1px;
+    color: white;
+    font-weight: bold;
+}
+section.left form input:invalid:not(:placeholder-shown) {
+    background-color: rgba(250, 0, 0, 0.8);
+}
+section.left form input:valid:not(:placeholder-shown) {
+    background-color: rgb(0, 128, 0.8);
+}
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 500px) {
     section.right {
         justify-content: space-between;
     }
     .logoarea {
         flex-wrap: nowrap;
-        overflow: visible;
         gap: 3vw;
         margin-top: 10vh;
     }
@@ -140,5 +164,21 @@ section.left p:last-child {
         font-size: 0.75rem;
         width: 8rem;
         height: 2rem;
+    }
+    section.left form > div {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0rem 2.5rem;
+        margin: 0;
+    }
+    section.left form legend {
+        font-size: 2rem;
+    }
+    section.left form label {
+        font-size: 1rem;
+    }
+    section.left form input {
+        width: 20vw;
+        height: 1.5rem;
     }
 }
