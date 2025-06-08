@@ -16,14 +16,76 @@ body {
     height: 100vh;
     width: auto;
     justify-content: space-between;
-    overflow: hidden;
+}
+section.left {
+    flex-grow: 1;
+    width: var(--left-width);
 }
 section.right {
     flex-grow: 1;
     width: var(--right-width);
     background-image: url(./img/tim-mossholder-dlYOWMX-JSE-unsplash.jpg);
+    background-size: 100vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
-section.left {
-    flex-grow: 1;
-    width: var(--left-width);
+.logoarea {
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5vh;
+    padding: 2vh 0;
+    flex-wrap: wrap;
+    margin-top: 10vh;
+}
+.logoarea > * {
+    flex-shrink: 1;
+}
+.logoarea > .logotext {
+    font-family: orange-juice, system-ui, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+        "Helvetica Neue", sans-serif;
+    font-size: 10vw;
+}
+.logoarea > img {
+    width: 20vw;
+    padding: 0 0;
+}
+section.right > p {
+    font-weight: bold;
+    font-size: 2vh;
+    text-align: center;
+    text-shadow: 0 0 2px black;
+    margin: auto 10vw 10vh 10vw;
+    transform: rotate(270deg);
+}
+
+@media only screen and (min-width: 600px) {
+    section.right {
+        justify-content: space-between;
+    }
+    .logoarea {
+        flex-wrap: nowrap;
+        overflow: visible;
+        gap: 3vw;
+        margin-top: 10vh;
+    }
+    .logoarea > * {
+        flex-shrink: 0;
+    }
+    .logoarea > .logotext {
+        font-size: 7.5vw;
+    }
+    .logoarea > img {
+        width: 7.5vw;
+    }
+    section.right > p {
+        margin: 0;
+        padding: 0;
+        margin-bottom: 1vh;
+        transform: rotate(0deg);
+    }
 }
